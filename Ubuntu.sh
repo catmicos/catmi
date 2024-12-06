@@ -112,7 +112,7 @@ exit_program() {
 create_shortcut() {
     local shortcut_path="/usr/local/bin/catmiup"
     echo "创建快捷方式：${shortcut_path}"
-    echo 'bash <(curl -fsSL https://github.com/catmicos/catmi/raw/refs/heads/main/Ubuntu.sh)' > "$shortcut_path"
+    echo 'bash <(curl -fsSL https://ssgithub.catmicos.workers.dev/https://github.com/catmicos/catmi/raw/refs/heads/main/Ubuntu.sh)' > "$shortcut_path"
     chmod +x "$shortcut_path"
     echo "快捷方式创建成功！直接运行 'catmiup' 启动面板。"
 }
