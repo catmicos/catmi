@@ -60,7 +60,7 @@ install_toolbox() {
 
 install_hysteria() {
     echo "开始安装 Alpine-Hysteria2..."
-    bash <(curl -fsSL https://github.com/mi1314cat/hysteria2-core/raw/refs/heads/main/hy2-panel.sh) || { echo "Hysteria2 安装失败"; return; }
+    bash <(curl -fsSL https://github.com/catmicos/catmi/raw/refs/heads/main/hy2-panel.sh) || { echo "Hysteria2 安装失败"; return; }
     read -p "安装完成，按回车返回主菜单..."
     main_menu
 }
@@ -75,7 +75,7 @@ install_warp() {
 
 install_singbox() {
     echo "开始安装 Sing-box..."
-    bash <(curl -fsSL https://github.com/mi1314cat/sing-box-core/raw/refs/heads/main/install.sh) || { echo "Sing-box 安装失败"; return; }
+    bash <(curl -fsSL https://github.com/catmicos/catmi/raw/refs/heads/main/install.sh) || { echo "Sing-box 安装失败"; return; }
     read -p "安装完成，按回车返回主菜单..."
     main_menu
 }
@@ -89,11 +89,11 @@ install_xray() {
     case $vchoice in
         1)
             echo "安装支持 IPv4 的脚本..."
-            bash <(curl -Ls https://github.com/mi1314cat/xary-core/raw/refs/heads/main/vless.sh) || { echo "IPv4 脚本安装失败"; return; }
+            bash <(curl -Ls https://github.com/catmicos/catmi/raw/refs/heads/main/vless.sh) || { echo "IPv4 脚本安装失败"; return; }
             ;;
         2)
             echo "安装支持 IPv6 的脚本..."
-            bash <(curl -Ls https://github.com/mi1314cat/xary-core/raw/refs/heads/main/6vless.sh) || { echo "IPv6 脚本安装失败"; return; }
+            bash <(curl -Ls https://github.com/catmicos/catmi/raw/refs/heads/main/6vless.sh) || { echo "IPv6 脚本安装失败"; return; }
             ;;
         *)
             echo "无效的选项，返回主菜单。"
@@ -112,7 +112,7 @@ exit_program() {
 create_shortcut() {
     local shortcut_path="/usr/local/bin/catmiup"
     echo "创建快捷方式：${shortcut_path}"
-    echo 'bash <(curl -fsSL https://cfgithub.gw2333.workers.dev/https://github.com/mi1314cat/One-click-script/raw/refs/heads/main/Ubuntu.sh)' > "$shortcut_path"
+    echo 'bash <(curl -fsSL https://github.com/catmicos/catmi/raw/refs/heads/main/Ubuntu.sh)' > "$shortcut_path"
     chmod +x "$shortcut_path"
     echo "快捷方式创建成功！直接运行 'catmiup' 启动面板。"
 }
